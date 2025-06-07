@@ -8,6 +8,7 @@ type Config struct {
 	Env      string   `yaml:"env"`
 	Server   Server   `yaml:"server"`
 	Postgres Postgres `yaml:"postgres"`
+	Redis    Redis    `yaml:"redis"`
 }
 
 type Server struct {
@@ -22,6 +23,10 @@ type Postgres struct {
 	Password string `yaml:"password"`
 	DBName   string `yaml:"dbname"`
 	SSLMode  string `yaml:"sslmode"`
+}
+
+type Redis struct {
+	Addr string `yaml:"address"`
 }
 
 func LoadConfig(configName string) (*Config, error) {

@@ -10,4 +10,7 @@ postgres:
   user: "postgres"
   password: "1106"
   dbname: "pet_project"
-  sslmode: "disable"    
+  sslmode: "disable"
+
+redis:
+  address: "localhost:6379"
